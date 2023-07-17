@@ -1,0 +1,9 @@
+Package: com.redenticdev.notistory
+Name: Notistory
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: View your notifications history in an app
+Maintainer: RedenticDev <hello@redentic.dev>
+Author: RedenticDev <hello@redentic.dev>
+Section: Utilities
+Depends: mobilesubstrate (>= 0.9.500), firmware (>= 13)

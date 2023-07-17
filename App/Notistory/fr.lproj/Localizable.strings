@@ -1,0 +1,16 @@
+{
+	// Settings
+	"SETTINGS" = "Options";
+	
+	// Details
+	"NAME" = "Application";
+	"IDENTIFIER" = "Identifiant";
+	"HEADER" = "En-tête";
+	"CONTENT" = "Contenu";
+	"ATTACHMENT" = "Pièce jointe";
+	"DATE" = "Date";
+	"IMAGE" = "%d image";
+	
+	// Preview
+	"PREVIEW_ERROR" = "Une erreur s'est produite lors du rendu de cette notification";
+}

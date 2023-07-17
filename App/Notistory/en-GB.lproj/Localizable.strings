@@ -1,0 +1,16 @@
+{
+	// Settings
+	"SETTINGS" = "Settings";
+	
+	// Details
+	"NAME" = "Application";
+	"IDENTIFIER" = "Bundle Identifier";
+	"HEADER" = "Header";
+	"CONTENT" = "Content";
+	"ATTACHMENT" = "Attachment";
+	"DATE" = "Date";
+	"IMAGE" = "%d image";
+	
+	// Preview
+	"PREVIEW_ERROR" = "An error occurred while rendering this notification";
+}
