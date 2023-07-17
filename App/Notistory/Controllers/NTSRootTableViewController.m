@@ -2,10 +2,10 @@
 
 /**
  TODO:
- - fix UISplitViewController iPad (tout est dans la vue de gauche) -> check RuntimeBrowser!
- - fix preview & imagedetail qui apparaissent pas sur iPad (write prefs at first startup?)
- - fix multiline dans details
- - fix showAppIcon qui marche 1 fois sur 2
+ - fix UISplitViewController iPad (everything lives on the left panel instead of full iPad screen) -> check RuntimeBrowser!
+ - fix preview & imagedetail not appearing on iPad (write prefs at first startup?)
+ - fix multiline in details
+ - fix unreliable showAppIcon
  - improve dark mode
  https://github.com/zbrateam/Zebra/blob/master/Zebra/Extensions/ZBTableViewController.m
 
@@ -15,27 +15,27 @@
  - delete notif peek & pop (uipreviewaction)
  - model sharedManager?
  - finir links settings + UIStackView pour header
- - fixer twitter pp avec HBLinkTableCell.m ligne 147 (+ trouver fetch app icons dans open in de HBPackageTableCell)
- - add message vous n'avez pas encore de notifications (+ tableFooterView)
- - messages d'erreur image preview + améliorer double tap to zoom (Peach)
- - bouton download image detail + pour preview
- - trouver notificationbuilder iOS pour finir la preview
- - swipe avec 2 doigts pour multi sélection
+ - fixer twitter pp with HBLinkTableCell.m line 147 (+ find fetch app icons in "open in" of HBPackageTableCell)
+ - add no notification message (+ tableFooterView)
+ - error message image preview + improve double tap to zoom (Peach)
+ - download button image detail + for preview
+ - find notificationbuilder iOS to finish preview
+ - swipe with 2 fingers for multi selection
  https://developer.apple.com/documentation/uikit/uitableviewdelegate/selecting_multiple_items_with_a_two-finger_pan_gesture?language=objc
- - faire le tri par dates
- - clean les imports UIKit
- - localiser tout
- - support 3D Touch sur l'app et les cells + hold to copy detail cells
- - ajouter des haptic (+ settings ?)
- - UIActivityIndicator pendant le refresh auto
- - NS_ASSUME_NONNULL_BEGIN/END pour tous les .h comme dans les Categories
- - supprimer UIImage+Size ?
+ - sort by dates
+ - clean UIKit imports
+ - localize everything
+ - support 3D Touch on app icon and cells + hold to copy detail cells
+ - add haptics (+ settings?)
+ - UIActivityIndicator during auto refresh
+ - NS_ASSUME_NONNULL_BEGIN/END for all .h files as in Categories
+ - delete UIImage+Size?
  - search bar
  https://github.com/LacertosusRepo/Open-Source-Tweaks/blob/master/TweakSearch/Tweak.x
- - enregistrer les records lol
- - faire la partie Hook (+ ouvrir dans Notistory/supprimer de l'app pour actions rapides bannières)
+ - save records lol
+ - make Hook part (+ open in Notistory/delete from the app for banners quick actions)
  - explanation README for App and Hook
- - widget iOS 14 ?
+ - widget iOS 14?
 
  Later:
  - Pin notifications
@@ -105,10 +105,10 @@
 
 	// TEST ONLY
 	NSArray *notifs = @[
-		[[NTSNotification alloc] initWithIdentifier:@"com.google.ios.youtube" name:@"YouTube" title:@"Léo Duff" content:@"Le problème avec le jailbreak !" attachedImage:nil date:[NSDate date]],
+		[[NTSNotification alloc] initWithIdentifier:@"com.google.ios.youtube" name:@"YouTube" title:@"Creator" content:@"Video title" attachedImage:nil date:[NSDate date]],
 		[[NTSNotification alloc] initWithIdentifier:@"ph.telegra.Telegraph" name:@"Telegram" title:@"r/jailbreak" content:@"[FREE RELEASE] Notistory - Keep track of your notifications!" attachedImage:nil date:[NSDate date]],
-		[[NTSNotification alloc] initWithIdentifier:@"com.apple.MobileSMS" name:@"Messages" title:@"Romain" content:@"Pièce jointe : 1 image" attachedImage:[UIImage _applicationIconImageForBundleIdentifier:@"com.apple.MobileSMS" format:2] date:[NSDate date]],
-		[[NTSNotification alloc] initWithIdentifier:@"com.reddit.Reddit" name:@"Reddit" title:@"New answer for your comment" content:@"noob7890 said: \"I think all your tweaks are really great and you should keep up the good work.\nYou are so important for the community!\"" attachedImage:[UIImage _applicationIconImageForBundleIdentifier:@"com.github.stormbreaker.prod" format:2] date:[NSDate date]]
+		[[NTSNotification alloc] initWithIdentifier:@"com.apple.MobileSMS" name:@"Messages" title:@"Mom" content:@"Attachment: 1 image" attachedImage:[UIImage _applicationIconImageForBundleIdentifier:@"com.apple.MobileSMS" format:2] date:[NSDate date]],
+		[[NTSNotification alloc] initWithIdentifier:@"com.reddit.Reddit" name:@"Reddit" title:@"New answer for your comment" content:@"user7890 said: \"You definitely should hurry up and release this app.\nIt would be so useful!\"" attachedImage:[UIImage _applicationIconImageForBundleIdentifier:@"com.github.stormbreaker.prod" format:2] date:[NSDate date]]
 	];
 	
 	[self.cells insertObject:[notifs objectAtIndex:arc4random_uniform((int)notifs.count)] atIndex:0];
